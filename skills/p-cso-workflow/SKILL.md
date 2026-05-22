@@ -1,6 +1,6 @@
 ---
 name: p-cso-workflow
-description: This skill should be used when transforming research notes into cognitively optimized manuscript text through a complete pipeline. Applies Pinker's Cognitive Style Optimization framework (syntax and coherence principles from "The Sense of Style") to produce clear, coherent academic writing with minimal reader cognitive burden. Ideal for manuscript preparation requiring systematic optimization from draft to final text.
+description: This skill should be used when transforming research notes or draft text into cognitively optimized manuscript text through a complete pipeline. Applies Pinker's Cognitive Style Optimization framework (syntax and coherence principles from "The Sense of Style") to produce clear, coherent academic writing with minimal reader cognitive burden. Use this skill whenever the user wants to improve readability, convert notes to manuscript text, or optimize any research writing for cognitive ease — even if they don't explicitly mention Pinker. This is the comprehensive writing tool; invoke it for any substantial academic writing improvement task.
 ---
 
 # P-CSO Workflow: Complete Notes-to-Manuscript with Cognitive Optimization
