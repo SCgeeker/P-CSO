@@ -32,7 +32,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 ### 方式 1: Claude Code Marketplace（推薦）
 
 ```bash
-/plugin marketplace add SCgeeker/claude-writing-config
+/plugin marketplace add SCgeeker/P-CSO
 /plugin install p-cso-skills
 ```
 
