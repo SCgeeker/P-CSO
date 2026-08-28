@@ -32,8 +32,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `pinker-syntax` 與 `pinker-coherence` 拆為 SKILL.md + references/，
   細則與校準範例移入 references/
 
+#### Removed
+- `pinker-quick`：規則子集停在舊版（6 條規則／7 條原則），與新架構矛盾，退役
+- `notes-to-manuscript`：功能已由 `p-cso-workflow` Stage 1 涵蓋，退役
+
 #### Notes
 - 本版例句一律使用公開文獻題材，不含未發表稿件內容
+- 本 repo 僅同步公開版；作者本機保留含未發表稿件逐字例句的版本
 
 ## [0.9.0] - 2025-11-07
 

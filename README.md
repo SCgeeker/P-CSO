@@ -46,7 +46,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 
 ## Skills 總覽
 
-本系統包含 **7 個專業 skills**，涵蓋從草稿到定稿的完整寫作流程：
+本系統包含 **5 個專業 skills**，涵蓋從草稿到定稿的完整寫作流程：
 
 ### 核心優化 Skills
 
@@ -68,27 +68,15 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 **適用**：段落流暢性弱、過渡不自然的文本
 **時間**：30 分鐘
 
-#### 4. `pinker-quick` - 快速清理
-**用途**：在起草階段快速反饋，應用前 3 條高影響力規則
-**包含**：刪除冗詞、修復主題-評論順序、添加邏輯連接詞
-**適用**：需要快速迭代、保持寫作動能的場景
-**時間**：5-10 分鐘
-
 ### 輔助 Skills
 
-#### 5. `notes-to-manuscript` - 筆記轉手稿
-**用途**：將分散的研究筆記轉換為結構化手稿草稿
-**強調**：AI 作為腳手架（非最終輸出），保護學術誠信
-**適用**：從原始筆記開始撰寫，需要結構化組織
-**時間**：1-2 小時
-
-#### 6. `manuscript-writing-review` - 手稿稽核
+#### 4. `manuscript-writing-review` - 手稿稽核
 **用途**：術語一致性、數值與引註一致性、主張與證據紀律
 **包含**：六道稽核（冗詞、被動語態、句構、術語、數值引註、主張紀律）
 **適用**：改寫後檢查術語是否統一、數字是否過期、讓步與指控是否超出證據
 **時間**：30-60 分鐘
 
-#### 7. `english-editing` - 學術英文編輯
+#### 5. `english-editing` - 學術英文編輯
 **用途**：專業學術英文校對，改善清晰度、語法和風格
 **包含**：冠詞使用、語法修正、標點符號、詞彙選擇、格式
 **適用**：手稿最終潤色或語言精修
@@ -112,8 +100,8 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 情境 3: 段落之間流暢性差
 → 使用 /pinker-coherence
 
-情境 4: 正在起草，需要快速反饋
-→ 使用 /pinker-quick
+情境 4: 術語不統一、數字過期、讓步超出證據
+→ 使用 /manuscript-writing-review
 
 情境 5: 只需語法和冠詞修正
 → 使用 /english-editing
@@ -124,11 +112,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 如果你從研究筆記開始撰寫：
 
 ```
-選項 A: 完整優化流程
-→ 使用 /p-cso-workflow（包含起草階段）
-
-選項 B: 簡單腳手架
-→ 使用 /notes-to-manuscript
+→ 使用 /p-cso-workflow（Stage 1 涵蓋筆記組織與草稿腳手架）
 ```
 
 ---
@@ -169,13 +153,13 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 
 ```
 撰寫第 1 段（用你自己的話）
-└─ 使用 /pinker-quick
-└─ 應用快速修正
+└─ 使用 /pinker-syntax
+└─ 應用句子層級修正
 └─ 繼續
 
 撰寫第 2 段
-└─ 使用 /pinker-quick
-└─ 應用快速修正
+└─ 使用 /pinker-syntax
+└─ 應用句子層級修正
 └─ 繼續
 
 [完成章節]
@@ -217,7 +201,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 **適用**：時間緊迫或文本已相當完善
 
 ```
-步驟 1: /pinker-quick（捕捉主要問題）
+步驟 1: /pinker-syntax（捕捉句子層級問題）
 步驟 2: /english-editing（語法潤色）
 步驟 3: 提交
 ```
@@ -293,7 +277,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 2. **審查所有變更的準確性**（你是內容專家）
 3. **從診斷中學習**（理解認知原則）
 4. **按順序使用 skills**（草稿 → P-CSO → 語法）
-5. **迭代使用**（在寫作時使用 `/pinker-quick` 以獲得更好的初稿）
+5. **迭代使用**（逐段使用 `/pinker-syntax` 以獲得更好的初稿）
 6. **保留專業術語**（不要為簡化犧牲精確性）
 
 ### 不應該做的 ❌
@@ -311,7 +295,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 | 任務 | 使用此 Skill | 時間 |
 |------|-------------|------|
 | 從筆記起草 | `/p-cso-workflow` | 2-4h |
-| 快速草稿反饋 | `/pinker-quick` | 5-10min |
+| 術語與數值稽核 | `/manuscript-writing-review` | 30-60min |
 | 修正複雜句子 | `/pinker-syntax` | 30min |
 | 修正段落流暢性 | `/pinker-coherence` | 30min |
 | 最終語法潤色 | `/english-editing` | 15-30min |
@@ -328,7 +312,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 
 ### P-CSO 期間
 - **起草**：P-CSO skills（組織、起草、優化）
-- **迭代**：`/pinker-quick`（即時反饋）
+- **迭代**：`/pinker-syntax`（逐段反饋）
 
 ### P-CSO 之後
 - **引用格式**：Zotero、Citation Machine
@@ -365,7 +349,7 @@ P-CSO（Pinker's Cognitive Style Optimization）是基於認知科學原理的�
 2. 研究診斷
 3. 識別你的重複問題（例如"我總是埋藏主旨"）
 4. 在下一個草稿中主動應用該原則
-5. 使用 `/pinker-quick` 驗證
+5. 使用 `/pinker-syntax` 驗證
 
 **目標**：內化原則，使初稿需要更少修訂
 
@@ -383,8 +367,7 @@ plugin/
 │   ├── p-cso-workflow/      # 完整流程
 │   ├── pinker-syntax/       # 句法優化
 │   ├── pinker-coherence/    # 連貫性優化
-│   ├── pinker-quick/        # 快速清理
-│   ├── notes-to-manuscript/ # 筆記轉手稿
+│   ├── manuscript-writing-review/  # 手稿稽核
 │   └── english-editing/     # 英文編輯
 └── README.md                # 本文件
 ```
