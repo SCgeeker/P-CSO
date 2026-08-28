@@ -5,6 +5,36 @@ All notable changes to P-CSO Writing Skills will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-08-28
+
+### Changed - Thin Orchestrator Architecture
+
+技能改為「薄協調器 + 規則歸屬子技能」的架構。每條規則只住在一個地方，
+直接呼叫子技能時同樣生效，不必每次都跑完整管線。
+
+#### Added
+- `manuscript-writing-review` skill：六道稽核（冗詞、被動語態、句構、術語、
+  數值與引註、主張紀律），加入 marketplace 清單
+- `pinker-syntax` Rules 7-11：四條子句規範加連接詞負荷檢查
+- `pinker-coherence` Principle 8（主語施事）與 Principle 7D（學術語域）：
+  偵測預告句、以交叉引用開頭的段落、作者姿態、報告立場而非提出主張、
+  短平觀察堆疊
+- `pinker-coherence` Principle 3C/3D：跨段抽象回指、代名詞收尾、
+  讀者尚未取得概念前不使用該術語
+- `manuscript-writing-review` Pass 4 領域用詞檢查與 Pass 6 主張紀律
+- `p-cso-workflow` 改寫協定：改寫檔獨立、逐段新舊對照、
+  HTML 註解回饋迴圈、整合後掃描過期數字
+- `p-cso-workflow` 溝通語言規則：大幅改寫用中文討論、逐行編輯用英文、
+  稿件文字恆為英文
+
+#### Changed
+- `p-cso-workflow` 由三階段擴為四階段，並移除自帶規則，全部委派子技能
+- `pinker-syntax` 與 `pinker-coherence` 拆為 SKILL.md + references/，
+  細則與校準範例移入 references/
+
+#### Notes
+- 本版例句一律使用公開文獻題材，不含未發表稿件內容
+
 ## [0.9.0] - 2025-11-07
 
 ### Changed - Marketplace Format Migration
